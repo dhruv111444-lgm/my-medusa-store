@@ -69,9 +69,7 @@ export default async function seedDiwaliProducts({ container }: ExecArgs) {
       `Deleting ${existingCategories.length} old categories: ${existingCategories.map((c) => c.name).join(", ")}`
     );
     await deleteProductCategoriesWorkflow(container).run({
-      input: {
-        ids: existingCategories.map((c) => c.id as string),
-      },
+      input: existingCategories.map((c) => c.id as string),
     });
     logger.info("✅ Old categories deleted.");
   }
