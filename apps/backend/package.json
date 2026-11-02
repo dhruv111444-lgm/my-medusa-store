@@ -13,7 +13,7 @@
     "medusa"
   ],
   "scripts": {
-    "build": "medusa build",
+    "build": "medusa build && node -e \"const fs=require('fs'); if(fs.existsSync('.medusa/server/public')) fs.cpSync('.medusa/server/public', 'public', {recursive: true, force: true})\"",
     "start": "medusa start",
     "dev": "medusa develop",
     "lint": "medusa lint",

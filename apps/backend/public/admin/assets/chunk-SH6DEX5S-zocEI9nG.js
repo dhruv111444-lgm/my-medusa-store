@@ -1,0 +1,1 @@
+import{cv as e,ct as u,s as i}from"./index-BVrh0irp.js";var n="product_variant",o=e(n),c=(r,a)=>{const{data:t,...s}=u({queryFn:()=>i.admin.productVariant.list(r),queryKey:o.list(r),...a});return{...t,...s}};export{o as p,c as u};
